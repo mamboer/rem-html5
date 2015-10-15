@@ -77,6 +77,8 @@
 
 一个使用rem-html5构建的[在线DEMO](http://faso.me/rem-html5).
 
+![qrcode](http://faso.me/rem-html5/img/qr.png)
+
 ### 使用指引
 
 1. 将rem-html5克隆至本地
