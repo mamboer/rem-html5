@@ -352,7 +352,7 @@ var app = (function(){
                 opts.imgRoot + 'qrcode_yuyue_qq.jpg',
                 opts.imgRoot + 'qrcode_yuyue_wx.jpg'
             ];
-            var res = pkg.film1.res.concat(pkg.scene3.res).concat(pkg.scene4.res).concat(pkg.film2.res); 
+            var res = pkg.scene3.res.concat(pkg.scene4.res); 
             pkg.loader.load(res1.concat(res), {
                 onComplete:function(time){
                     pkg.scenes.show();
@@ -474,38 +474,6 @@ var app = (function(){
         }
     });
 
-    //!film1
-    pkg.define('film1', {
-        init:function(opts){
-            this.opts= opts;
-            var res = [];
-            for(var i = 1;i<=33;i++){
-                res.push(opts.imgRoot + 'film1-f'+i+'.png');
-            }
-            //static resources
-            //it will be loaded in scene1
-            this.res = res;
-        },
-        load:function(){
-            var res = this.res;
-            this.$jijia = $('#jijiaFilm1');
-            this.film1 = new film(this.$jijia, {
-                pics : res,
-                duration:1800,
-                onAnimated:function(){
-                    $win.trigger('film1:anidone');
-                }
-            });
-        },
-        animate:function(){
-            this.$jijia.addClass('playing');
-            this.film1.play();
-        },
-        reset:function(){
-            this.$jijia.removeClass('playing');
-            this.$jijia.find('img').remove();
-        }
-    });
     //!scene1
     pkg.define('scene1',{
         init:function(opts){
@@ -517,10 +485,7 @@ var app = (function(){
             $body.on('tap', '.spr-chuji',function(e){
                 pkg.scene1.exit();
             }); 
-            $win.on('film1:anidone', function(e){
-                pkg.scene1.isAnimating = false;
-                pkg.scene1.close();        
-            }).on('res:ready',function(e){
+            $win.on('res:ready',function(e){
                 pkg.scene1.show();
             });
 
@@ -538,7 +503,8 @@ var app = (function(){
                 }
             }).on('end',function(e){
                 ani.off('end');
-                pkg.film1.animate();
+                pkg.scene1.isAnimating = false;
+                pkg.scene1.close();        
             });
         },
         exit:function(){
@@ -546,7 +512,6 @@ var app = (function(){
             this.isAnimating = true;
             pkg.appaudio.play();
             $body.removeClass('back-0 revert-active-1');
-            pkg.film1.load();
             this.transform();
         },
         close:function(){
@@ -560,7 +525,6 @@ var app = (function(){
         reset:function(){
            
             pkg.scenes.active('active-1', true, function(){
-                pkg.film1.reset();    
                 pkg.scene1.$el.removeClass('leaving closing');
                 $body.addClass('back-0');
                 pkg.scene1.$jijiaAvatar.removeClass('mo-animation').attr('style','');
@@ -654,36 +618,6 @@ var app = (function(){
        
     });
 
-    // robot film2
-    pkg.define('film2', {
-        init:function(opts){
-            this.opts= opts;
-            var res = [];
-            for(var i = 1;i<=8;i++){
-                res.push(opts.imgRoot + 'film2-f'+i+'.png');
-            }
-            this.res = res;
-        },
-        load:function(){
-            var res = this.res;
-            this.$jijia = $('#jijiaFilm2');
-            this.film1 = new film(this.$jijia, {
-                pics : res,
-                duration: 2200,
-                onAnimated:function(){
-                    $win.trigger('film2:anidone');
-                }
-            });
-        },
-        animate:function(){
-            this.$jijia.addClass('playing');
-            this.film1.play();
-        },
-        reset:function(){
-            this.$jijia.html('');
-        }
-    });
-
     //!scene5
     pkg.define('scene5', {
         init:function(opts){
@@ -694,8 +628,6 @@ var app = (function(){
         initEvts:function(){
             $win.on('res:ready',function(){
                 pkg.scene5.show();
-            }).on('film2:anidone',function(){
-                pkg.scene5.exit();
             }).on('scenes:active-4',function(e){
                 pkg.scene5.animate(); 
             }).on('revert-scenes:active-4',function(e){
@@ -704,7 +636,6 @@ var app = (function(){
         },
         show:function(){
             this.$el = $('#scene5');
-            this.$jijia = $('#jijiaFilm2');
             this.$bg = $('#s5BG'); 
             this.$robot = $('#s5Jijia');
             this.$platform = $('#s5Platform');
@@ -713,16 +644,19 @@ var app = (function(){
 
             this.isAnimating = false;
             this.$el.addClass('transformed');
+        
+            $win.trigger('scene5:exit');
+        
         },
         animate:function(){
             if(this.isAnimating) return;
             this.isAnimating = true;
             this.$el.addClass('transforming');
-            pkg.film2.load();
-            pkg.film2.animate();
+            
+            this.exit();
+
         },
         reset:function(){
-            pkg.film2.reset();
             this.$el.removeClass('transforming transformed');    
         }
         
@@ -736,10 +670,8 @@ var app = (function(){
         initEvts:function(){
             $win.on('res:ready',function(){
                 pkg.scene6.show();
-            }).on('film2:anidone',function(){
+            }).on('scene5:exit',function(){
                 pkg.scene6.play();
-            }).on('film2:loading',function(e, cnt, ttl){
-            }).on('film2:complete',function(){
             }).on('revert-scenes:active-4',function(){
                 pkg.scene6.reset();    
             });
