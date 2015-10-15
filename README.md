@@ -1,4 +1,7 @@
 # rem-html5
+
+[English Readme File Is Here](README-en.md)
+
 这是一个全部使用REM尺寸单元做多设备适配的HTML5移动页面模板。
 
 使用REM的目标自然是希望尽量一套代码适配多尺寸的移动终端，尽量减少在media query里面针对各种尺寸做微调。
@@ -69,7 +72,6 @@
     * Swig模板引擎(swig.js)
     * 文件更新监测(watch.js)
 
-    Multiple Gulp tasks like `sprites`, `imagemin`, `uglify`, `replace(using swig)`, `livereload` ...
 
 ### Demo
 
