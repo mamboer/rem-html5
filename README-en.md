@@ -12,6 +12,8 @@ A Multiple Devices Adaptive HTML5 Mobile Page Template Leveraging The REM Unit
 
 Check the [live demo](http://faso.me/rem-html5) using rem-html5.
 
+![qrcode](http://faso.me/rem-html5/img/qr.png)
+
 ### How To Use
 
 1. Clone the rem-html5 as a local copy
