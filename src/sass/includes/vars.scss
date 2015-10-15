@@ -1,0 +1,18 @@
+//rem base fontsize:100px = 1rem;
+$REM_BaseFontsize: 100;
+//the design width is 320x2 = 640px
+$Design_Ratio:2;
+//rem unit for converting px to rem
+$REM_Unit: (1/$REM_BaseFontsize)/$Design_Ratio;
+
+$GIF_1PX: 'data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+$CLOUD1_TOP: -260px;
+
+$easeInCubic:cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeInQuad:cubic-bezier(0.550, 0.085, 0.680, 0.530);
+
+$SCENE_DURATION:2.5s;
+
+$FLYING_ROBOT_WIDTH: 280px;
+$FLYING_ROBOT_HEIGHT:510PX;

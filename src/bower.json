@@ -1,0 +1,26 @@
+{
+  "name": "rem-html5",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mamboer/rem-html5",
+  "authors": [
+    "LV <mamboer@live.com>"
+  ],
+  "description": "rem-html5 bower resources",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "rem-html5"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.4.0"
+  }
+}

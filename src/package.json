@@ -1,0 +1,47 @@
+{
+  "name": "QQ_XHZS",
+  "version": "0.1.1",
+  "keywords": "星河战神，星河战神手游，星河战神下载，星河战神官网，星河战神攻略，星河战神视频，XHZS，星河，战神，雷霆战机2，雷霆2，飞行射击手游，飞机大战手游，打飞机手游，腾讯飞行射击手游，变形金刚手游",
+  "description": "《星河战神》是一款以西方神话为背景的3D飞行射击弹幕游戏，搭配战神、装备的收集、养成及搭配，丰富的关卡和多变的众神Boss等核心玩法。推出无尽模式、闯关模式、试炼模式等多种游戏体验。",
+  "repository": "git@github.com:mamboer/rem-html5.git",
+  "homepage": "http://faso.me/rem-html5",
+  "title": "机甲战神，整装出击！",
+  "issues": "设计：tuantuan | 重构：levinhuang | 创建：2015/08/17 | 更新：| 团队博客：http://tgideas.qq.com/",
+  "author": {
+    "name": "LevinWong",
+    "site": "http://faso.me"
+  },
+  "license": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-asvn": "^1.0.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-convert-encoding": "0.0.3",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-newer": "^0.5.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-swig": "^0.7.4",
+    "gulp-task-loader": "^1.2.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp.spritesmith": "^4.0.0",
+    "imagemin-pngquant": "^4.1.2",
+    "jshint-stylish": "^2.0.1",
+    "shelljs": "^0.5.1",
+    "swig": "^1.4.2"
+  },
+  "dependencies": {}
+}

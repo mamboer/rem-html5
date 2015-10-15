@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:mamboer/rem-html5.git
+	branch = gh-pages
