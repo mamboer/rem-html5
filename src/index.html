@@ -35,6 +35,15 @@
 
     {% if release %}
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+   	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "//hm.baidu.com/hm.js?{{baiduTJCode}}";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+	})();
+	</script> 
     {% else %}
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     {% endif %}
