@@ -4,6 +4,6 @@ module.exports = function(){
 
     //copy to gh-pages
     return gulp.src(['dist/**/*'])
-        .pipe(gulp.dest('../dist'));
+        .pipe(gulp.dest('../dist/demo2'));
 
 };

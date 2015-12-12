@@ -50,133 +50,57 @@
         </div>
     </div>
     <div class="icon-music" id="appAudio">
-        <i class="spr2x spr-playdisk"></i>
-        <i class="spr2x spr-play"></i>
-        <audio id="appAudioItem" src="http://game.gtimg.cn/images/xhzs/act/a20150817rock/media/s.mp3" preload loop></audio>
-    </div>
-    <div class="pop-qrcode hide" id="popQRCode">
-        <div class="pop-qrcode-bg" id="popQRCodeBG"></div>
-        <div class="pop-qrcode-bd">
-            <img src="img/qrcode_wx.jpg" alt="微信公众号"/>
-            <p>
-                长按识别二维码<br/>关注官方微信公众账号
-            </p>
-        </div>
+        <i class="spr2x spr-m-on"></i>
+        <i class="spr2x spr-m-off"></i>
+        <audio id="appAudioItem" preload loop></audio>
     </div>
 
     <script id="tplScenes" type="text/lv-tpl">
-    <div class="s6" id="scene6">
-        <div class="s-bg s6-bg" style="background-image:url(img/s6-bg.jpg)"></div>
-        <div class="s6-part animated app-header">
-            <img class="pic-res" src="img/bg-header.png" alt="星河战神"/>
-            <div class="s6-qrcode" onclick="app.hottag('a20150817rock.btn.qrcode')" id="s6QRCode"></div>
-        </div>
-        <div class="s6-part app-slogan-wrap"><div class="animated app-slogan"><img class="pic-res" src="img/slogan.png" alt="星河战神"/></div></div>
-        <div class="s6-part animated app-menus clearfix">
-            <img class="pic-res" src="img/menus.png" alt="星河战神"/>
-            <div class="app-menus-1">
-                <a href="http://game.weixin.qq.com/cgi-bin/act?noticeid=200974301&actid=1887&k=7RZxGsZIzhrZ4I91tLTcFA%3D%3D&q=0&jsapi_ticket=1#wechat_redirect" class="lnk-download" title="预约下载" onclick="app.hottag('a20150817rock.btn.download')"></a>
-                <i class="spr2x spr-entrylight app-menus-light1"></i>
-            </div>
-            <div class="app-menus-2">
-                <a href="http://xhzs.qq.com/m/" class="lnk-home" title="进入官网" onclick="app.hottag('a20150817rock.btn.home')"></a>
-                <i class="spr2x spr-entrylight app-menus-light2"></i>
-            </div>
-        </div>
-    </div>
 
-    <div class="s5" id="scene5">
-        <div class="s-bg s5-bg" style="background-image:url(img/s5-bg1.jpg)">
-            <div class="s5-slogan0" id="s5Slogan0" style="background-image:url(img/scene4-slogan.png)"></div>
-            <div class="s5-rock1"><img class="pic-res" src="img/s5-rock1.png" alt="星河陨石"/></div>
-            <div class="s5-rock2"><i class="spr2x spr-rock4"></i></div>
-            <div class="s5-rock3"><i class="spr2x spr-rock3"></i></div>
-        </div>
-        <div class="s5-platform" id="s5Platform">
-            <img class="pic-res s5-platform-1" src="img/platform_01.png" alt="机甲平台"/>
-            <img class="pic-res s5-platform-2" src="img/platform_02.png" alt="机甲平台"/>
-            <img class="pic-res s5-platform-3" src="img/platform_03.png" alt="机甲平台"/>
-            <img class="pic-res s5-platform-4" src="img/platform_04.png" alt="机甲平台"/>
-            <div class="s5-slogan1" style="background-image:url(img/scene5-slogan.png)" id="s5Slogan1"></div>
-        </div>
-        <div class="flying-robot s5-jijia" id="s5Jijia"><img class="pic-res" src="img/flying-robot.png" alt="星河机甲"/></div>
-        <div class="s5-transform" id="s5Transform">
-            <div class="s5-transform-bg"></div>
-            <div class="s5-robot" id="jijiaFilm2"></div>
-        </div>
+    <div class="slide" id="slide">
+        <ul class="content">
+            <li class="s1" style="background-image:url(img/bg_01.jpg)">
+				<div class="flag slogan-01">
+					<img src="img/slogan_01.png" class="animated bounceInUp pic-res" />
+				</div>
+			</li> 
+            <li class="s2" style="background-image:url(img/bg_02.jpg)">
+                <div class="flag ball">
+                    <img src="img/ball.png" class="animated bounceIn pic-res"/>
+                </div>
+			</li> 
+            <li class="s3" style="background-image:url(img/bg_03.jpg)">
+                <div class="flag ball">
+                    <img src="img/ball.png" class="animated bounceIn pic-res"/>
+                </div>
+			</li> 
+            <li class="s4" style="background-image:url(img/bg_04.jpg)">
+                <div class="flag ball">
+                    <img src="img/ball.png" class="animated bounceIn pic-res"/>
+                </div>
+			</li> 
+            <li class="s5" style="background-image:url(img/bg_05.jpg)">
+                <div class="flag ball">
+                    <img src="img/ball.png" class="animated bounceIn pic-res"/>
+                </div>
+			</li> 
+            <li class="s6" style="background-image:url(img/bg_06.jpg)">
+                <div class="flag ball">
+                    <img src="img/ball.png" class="animated bounceIn pic-res"/>
+                </div>
+			</li> 
+            <li class="slast">
+                <div class="vh-center">
+                    <div class="logo"><img src="img/logo.png" class="pic-res"/></div>
+                    <a href="http://pdj.jd.com" class="btn-down"><img class="pic-res" src="img/btn-down.png"/></a>
+                </div>  
+            </li>
+        </ul>
     </div>
+   
 
-    <div class="scenes" id="scenes">    
-        
-        <div class="s s4" id="scene4" style="background-image:url(img/blackhole-bg.jpg);">
-            <div class="s4-lights" style="background-image:url(img/blackhole-lights.png);"></div>
-            <div class="s4-light"><i class="spr2x spr-light"></i></div>
-            <div class="s4-rock s4-rock1"><i class="spr2x spr-rock1"></i></div>
-            <div class="s4-rock s4-rock2"><i class="spr2x spr-rock2"></i></div>
-            <div class="s4-rock s4-rock3"><i class="spr2x spr-rock1"></i></div>
-            <div class="s4-rock s4-rock4"><i class="spr2x spr-rock2"></i></div>
-            <div class="flying-robot s4-jijia" id="s4Jijia"><img class="pic-res" src="img/flying-robot.png" alt="星河机甲"/></div>
-        </div>
-
-        <div class="s2x s3" id="scene3">
-            <div class="s3-bg" id="s3BG">
-                <div class="s3-bg-1" id="s3BG1">
-                    <div class="s3-blackhole" id="s3Blackhole">
-                        <img src="img/blackhole.png" alt="星河黑洞" class="pic-res pic-blackhole"/>
-                    </div>
-                    <div class="s3-blackhole-edge" style="background-image:url(img/blackhole-edge.png)"></div>
-                    <div class="s3-bg-inst s3-bg-a s3-bg-1a">
-                        <img src="img/city_02_01.jpg" class="pic-full"/>
-                    </div>
-                </div>
-                <div class="s3-bg-2" id="s3BG2">
-                    <div class="s3-bg-inst s3-bg-a s3-bg-2a">
-                        <img class="pic-full" src="img/city_01_01.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="s3-slogan" id="s3Slogan" style="background-image:url(img/scene3-slogan.png);"></div>
-            <div class="flying-robot s3-jijia" id="s3Jijia"><img class="pic-res" src="img/flying-robot.png" alt="星河机甲"/></div>
-        </div>
-        <div class="s s1" id="scene1">
-            <div class="s1-cloud">
-                <img src="img/scene1-bg.jpg" class="pic-full"/>
-                <div class="s1-cloud-inst s1-cloud-3" style="background-image:url(img/cloud2.png)"></div>
-            </div>
-            <div class="s1-bg" id="s1BG">
-                <div class="s1-bg-l">
-                    <img  src="img/scene1-bgl.png" alt="星河战神之门"/>
-                </div>
-                <div class="s1-bg-r">
-                    <img src="img/scene1-bgr.png" alt="星河战神之门"/>
-                </div>
-            </div>        
-            <div class="s1-logo"><i class="animated bounceInLeft spr2x spr-logo"></i></div>
-            <div class="s1-jijia">
-                <div class="s1-jijia-avatar" id="s1JijiaAvatar"><img class="pic-res pic-jijia" src="img/scene1-jijia.png" alt="星河战神机甲"/></div>
-                <div class="s1-jijia-taizi"><img class="pic-res pic-taizi" src="img/scene1-taizi.png" alt="星河战神机甲底座"/></div>
-            </div>
-            <div class="flying-robot s1-robot" id="s1Robot"><img class="pic-res" src="img/flying-robot.png" alt="星河机甲"/></div>
-            <div class="s1-slogan">
-                <div class="s1-slogan-inner animated bounceInUp">
-                    <div class="s1-slogan-row1"><span class="s1-slogan-txt" id="s1LoaderNum">星河战神已蓄势待发，等待你的指令</span></div>
-                    <div class="s1-slogan-row2"><i class="animated flash spr2x spr-chuji" onclick="app.hottag('a20150817rock.btn.chuji')"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-tip" id="scrollTip">
-        <div class="scroll-tip-bg"></div>
-        <div class="scroll-tip-bd">
-            <p class="scroll-tip-text">向下滑动</p>
-            <i class="spr2x spr-hand"></i>
-            <i class="spr2x spr-arrup"></i>
-        </div>
-    </div>
     </script>
 
-    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
-    
     {% if release %}
     <script src="js/all.min.js"></script>
     {% else %}
@@ -189,15 +113,9 @@
     {% endif %}
     <script>
         app.init({
-            scene5: {
-                transformingDelay:5500
-            },
             imgRoot:"img/",
-            sceneCnt:3,
+            mediaRoot:"media/",
             dummy:1
-        });
-        document.addEventListener('DOMContentLoaded',function(e){
-            
         });
     </script>
 

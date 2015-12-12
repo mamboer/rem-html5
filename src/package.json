@@ -1,12 +1,12 @@
 {
-  "name": "QQ_XHZS",
+  "name": "REM-HTML5",
   "version": "0.1.1",
-  "keywords": "星河战神，星河战神手游，星河战神下载，星河战神官网，星河战神攻略，星河战神视频，XHZS，星河，战神，雷霆战机2，雷霆2，飞行射击手游，飞机大战手游，打飞机手游，腾讯飞行射击手游，变形金刚手游",
-  "description": "《星河战神》是一款以西方神话为背景的3D飞行射击弹幕游戏，搭配战神、装备的收集、养成及搭配，丰富的关卡和多变的众神Boss等核心玩法。推出无尽模式、闯关模式、试炼模式等多种游戏体验。",
-  "repository": "git@github.com:mamboer/rem-html5.git",
-  "homepage": "http://faso.me/rem-html5",
-  "title": "机甲战神，整装出击！",
-  "issues": "设计：tuantuan | 重构：levinhuang | 创建：2015/08/17 | 更新：| 团队博客：http://tgideas.qq.com/",
+  "keywords": "网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东,京东双12",
+  "description": "京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!",
+  "repository": "git@github.com:mamboer/h5.git",
+  "homepage": "http://faso.me/h5",
+  "title": "京东到家，何必排队去支付！京东到家，2小时内超市搬回家！",
+  "issues": "设计：coby | 前端：lv | 创建：2015/12/12 | 更新：| 团队博客：http://aotu.io",
   "author": {
     "name": "LevinWong",
     "site": "http://faso.me"
@@ -36,7 +36,7 @@
     "gulp-swig": "^0.7.4",
     "gulp-task-loader": "^1.2.1",
     "gulp-uglify": "^1.2.0",
-    "gulp.spritesmith": "^4.0.0",
+    "gulp.spritesmith": "^6.0.0",
     "imagemin-pngquant": "^4.1.2",
     "jshint-stylish": "^2.0.1",
     "shelljs": "^0.5.1",
