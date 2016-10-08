@@ -1,47 +1,41 @@
 var gulp        = require('gulp'),
     svn         = require('gulp-asvn'),
-    path        = require('path'),
-    actFolder   = path.join(__dirname,'..','..'),
-    svnCfg      = require('../svnconf.json');    
+    path        = require('path');
 
 require('shelljs/global');
 
-var svnConf = {
-    svnDir : actFolder
-}
-
-var svnAdd = function(cbk){
-    svn.add (svnConf.svnDir, function(err){
+var svnAdd = function(opts, cbk){
+    svn.add (opts.svnCfg.actFolder, function(err){
         cbk(err);
     });
 
 };
 
-var svnCommit = function(cbk){
-    svn.commit (svnConf.svnDir, function(err){
+var svnCommit = function(opts, cbk){
+    svn.commit (opts.svnCfg.actFolder, function(err){
         if(err) throw err;
-        cbk&&cbk(null);
+        cbk && cbk(null);
     });
 };
 
-var svnDeleteMissings = function(){
+var svnDeleteMissings = function(opts){
     if (!which('svn')) {
         echo('Sorry, this script requires svn');
         exit(1);
     }   
-    cd(svnConf.svnDir);
-    var cmdTxt = 'svn st | grep ^! | awk \'{print " --force "$2}\' | xargs svn rm --username ' + svnCfg.user + ' --password ' + svnCfg.password;
+    cd(opts.svnCfg.actFolder);
+    var cmdTxt = 'svn st | grep ^! | awk \'{print " --force "$2}\' | xargs svn rm --username ' + opts.svnCfg.user + ' --password ' + opts.svnCfg.password;
     // Run external tool synchronously
     if (exec(cmdTxt).code !== 0) {
         echo('Error: SVN delete missing files failed');
         exit(1);
     }
-    svnCommit();
+    svnCommit(opts);
 };
 
 module.exports = function(){
 
-    svnAdd(function(err){
+    svnAdd(this.opts, function(err){
         if(err){
             console.log(err);
         }

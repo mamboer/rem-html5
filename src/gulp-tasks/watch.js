@@ -1,12 +1,13 @@
-var gulp        = require('gulp'),
-    livereload  = require('gulp-livereload');
+var path = require('path');
 
 module.exports =  function() {
-    livereload.listen();
-    gulp.watch(['js/*.js','*.html'],['reload']);  // livereload not works for js file, so we have to reload the whole page
-    gulp.watch(['sass/**/*.scss'],['reloadCss']);  // livereload not works for js file, so we have to reload the whole page
+
+    var gulp = this.gulp;
+
+    gulp.watch(['*.html'], ['swig']);
+    gulp.watch(['js/*.js'], ['js']);
+    gulp.watch(['sass/**/*.scss'],['css']);
     gulp.watch(['img/**'],['imagemin']);
     gulp.watch(['sprites/**'],['sprites']);
+    gulp.watch(['dist/**']).on('change', this.opts.bs.reload);
 };
-
-module.exports.dependencies = ['express'];

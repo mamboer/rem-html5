@@ -1,10 +1,9 @@
-var gulp        = require('gulp'),
-    spritesmith = require('gulp.spritesmith'),
-    cssmin      = require('gulp-cssmin'),
-    rename      = require('gulp-rename');
-    
+var spritesmith = require('gulp.spritesmith');
 
 module.exports = function(){
+
+    var gulp = this.gulp,
+        $ = this.opts.$;
 
     var spriteData = gulp.src('sprites/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
