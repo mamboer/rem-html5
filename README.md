@@ -109,7 +109,7 @@
     gulp
     ```
 
-    需先安装`gulp`，没安装的请运行`npm i -g gulp`.
+    需先安装`gulp`，没安装的请运行`npm i -g gulp-cli`.
 
 5. 浏览器访问localhost:4000/dist/
 
